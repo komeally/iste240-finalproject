@@ -1,0 +1,313 @@
+/* Style sheet for Discover Costa Rica website
+/* Kasim O'Meally 2/26/2022
+*/
+ 
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgba(43, 35, 86, 0.212);
+}
+
+header{
+    font-size: x-large;
+    text-align: center;
+    background-color: rgb(239, 51, 64);
+    padding: 10px;
+}
+
+/* Styling text that says "Pura Vida" */
+.pura-vida{
+    font-size: smaller;
+}
+
+.transform {
+    transition: 1s;
+}
+
+.transform:hover{
+    transform:scale(1.1);
+    font-size: 110%;
+}
+
+/* Styling content on nav menu, color is based on Costa Rica flag */
+nav{
+    overflow: hidden;
+    background-color: rgb(0, 32, 91);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* Styling links on nav menu */
+nav a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Creating a dropdown menu */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Styling both the dropdown and dropbutto  */
+.dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+}
+
+.dropbtn {
+    transition: 1s;
+}
+
+.dropbtn:hover {
+    transform:scale(1.1);
+    font-size: 110%;
+}
+
+/* Change color when nav link is hovered on */
+nav a:hover, .dropdown:hover .dropbtn {
+    background-color: navy;
+}
+
+/* Styling the actual dropdown */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #B3CBE4;
+    min-width: 160px;
+}
+
+/* Styling links in the actual dropdown */
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+/* Change color when dropdown link is hovered */
+.dropdown-content a:hover {
+    background-color: #cee2f7;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow {
+  margin: auto;
+  padding-top: 2em;
+}
+
+.mySlides img {
+    display: block;
+    opacity: 1;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    max-width: 100%;
+}
+
+/* Caption text */
+.text {
+  font-size: 15px;
+  padding: 8px 12px;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+p{
+    font-size: 20px;
+}
+
+.comment{
+    width: fit-content;
+    font-size: initial;
+    border:3px; 
+    border-style:solid; 
+    border-color:#2E5CAB; 
+    padding: 1em;
+}
+
+#gMap {
+    height: 405px;
+    width: 707px;
+}
+
+/* Displays the maps in a flex row */
+.flex-maps{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+}
+
+
+/* Tagline that appears below maps*/
+.tagline{
+    font-size: x-large;
+    text-align: center;
+}
+
+h1, h2{
+    text-align: center;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+/* Change padding of h2 elements that belong to the venue-container div */
+.venue-container h2{
+    padding-top: 10%;
+}
+
+/* Floats images with class "venue" to the right */
+.venue{
+    float:right;
+}
+
+/* Floats images with class "venue" to the left */
+.venue2{
+    float: left;
+    padding-right: 3%;
+}
+
+.venue-info{
+    margin-top: 100px;
+}
+
+.venue-info p{
+    font-size: 24px;
+    max-width: 55%;
+    margin-left: 10px;
+}
+
+/* Alternative class for venue-info, used when images have the float property to the left */
+.venue-info2{
+    margin-top: 100px;
+}
+
+.venue-info2 p{
+    font-size: 24px;
+    max-width: 85%;
+}
+
+fieldset{
+    max-width: 25%;
+}
+
+/* Styles paragraphs belonging to the grading page */
+.design, .info, .content, .html-css, .reference, .extras, .script{
+    font-size: larger;
+    max-width: 75%;
+}
+
+li{
+    font-size: larger;
+    padding-bottom: 1em;
+}
+
+/* Styling tabular data in references page */
+table, th, td {
+    border:1px solid black;
+}
+
+th, td{
+    padding: 5px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    /* Responsive images */
+    img{
+        max-width: 100%;
+        float: none;
+    }
+
+    #gMap {
+        width: 100%;
+    }
+
+    /* Overrides flex-map classes */
+    .flex-maps{
+        display: block;
+        display: inline-block;
+    }
+
+    .map, #gMap{
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    .venue-info p, .venue-info2 p {
+        font-size: 15px;
+        max-width: initial;
+        padding: 0;
+    }
+
+    .tagline{
+        font-size: 25px;
+    }
+
+    .venue, .venue2{
+        padding-bottom: 2em;
+    }
+
+    .venue-container{
+        padding-top: 0;
+    }
+
+    fieldset{
+        max-width: 100%;
+    }
+
+    .design, .info, .content, .html-css, .reference{
+        max-width: 100%;
+    }
+
+    h3{
+        text-align: center;
+    }
+
+
+}
