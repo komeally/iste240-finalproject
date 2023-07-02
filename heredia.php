@@ -5,7 +5,7 @@
 
     $servername = "localhost";
     $username = "klo7619";
-    $password = "Wingback2!supralapsarian";
+    $password = getenv('DB_PASSWORD');
     $database = "klo7619";
 
     // Create connection
